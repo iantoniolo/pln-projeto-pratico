@@ -17,11 +17,16 @@ O usuário informa um tema. O notebook busca o artigo correspondente na **Wikip�
 2. **Reconhecimento de Entidades Nomeadas**: pessoas, organizações, locais e datas, com saída estruturada (Pydantic).
 3. **Sistema de Perguntas e Respostas**: respostas baseadas só no artigo recuperado (RAG simples).
 
+Além disso, explora duas técnicas sugeridas nos critérios de avaliação:
+
+- **Agentes**: um agente LangChain (`create_agent`) com duas ferramentas, `pesquisar_wikipedia` e `ler_artigo`. O próprio LLM decide o que pesquisar e ler para responder perguntas que exigem mais de um artigo, como comparações e perguntas de múltiplos saltos.
+- **Geração de Dados Sintéticos**: o LLM gera perguntas com respostas de referência a partir do artigo. Esse conjunto é usado para medir a acurácia do sistema de perguntas e respostas, com outro prompt atuando como juiz (*LLM-as-a-judge*).
+
 ## Tecnologias
 
 | Item | Escolha |
 |---|---|
-| Framework | [LangChain](https://python.langchain.com) (`langchain-anthropic`) |
+| Framework | [LangChain](https://python.langchain.com) (`langchain-anthropic`; agente com `create_agent`) |
 | LLM | Claude Haiku 5.5 (`claude-haiku-5-5`), [documentação](https://docs.claude.com/en/docs/about-claude/models/overview) |
 | API | MediaWiki Action API, [documentação](https://www.mediawiki.org/wiki/API:Main_page) |
 
