@@ -1,5 +1,7 @@
 # Projeto Prático de PLN (2026-Q3, UFABC)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iantoniolo/pln-projeto-pratico/blob/main/PLN_Projeto_Wikipedia_Claude.ipynb)
+
 Projeto da disciplina **Processamento de Linguagem Natural**, com o Prof. Alexandre Donizeti Alves.
 
 ## Equipe
