@@ -27,6 +27,16 @@ O usuário informa um tema. O notebook busca o artigo correspondente na **Wikip�
 
 ## Como executar
 
-1. Abra `PLN_Projeto_Wikipedia_Claude.ipynb` no Google Colab.
-2. Em **Secrets** (ícone 🔑), crie `ANTHROPIC_API_KEY` com sua chave do Claude Console.
+O notebook neste repositório já está **executado**, com todas as saídas.
+
+**No Google Colab**
+
+1. Abra o notebook pelo botão *Open in Colab* acima.
+2. Em **Secrets** (ícone 🔑), crie `ANTHROPIC_API_KEY` com sua chave do Claude Console e habilite o acesso do notebook.
 3. Execute todas as células (*Ambiente de execução → Executar tudo*).
+
+**Localmente (VS Code ou Jupyter)**
+
+1. `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`
+2. Crie um arquivo `.env` na pasta do projeto com `ANTHROPIC_API_KEY=...` (ele está no `.gitignore`).
+3. Abra o notebook, selecione o kernel do `.venv` e execute todas as células.
